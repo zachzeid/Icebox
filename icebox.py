@@ -28,7 +28,6 @@ def stop_state(instanceList):
 	for list in instanceList:
 		for instance in list:
 			if instance.state == "running":
-				#print instance.state, instance.id
 				instance_state.append(instance.id)
 				#instance.stop()
 				instance.update()
@@ -59,5 +58,4 @@ if args.start:
 if args.stop:
 	stop_instance = stop_state(instance_list)
 	print "Stopping instances", stop_instance
-#check = check_state(instance_list)
 
